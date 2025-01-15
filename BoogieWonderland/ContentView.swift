@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  var body: some View {
+    VStack {
+      Text("Boogie Wonderland!")
+        .font(.largeTitle)
+        .fontWeight(.heavy)
+      
+      HStack {
+        Image(systemName: "globe")
+          .resizable()
+          .scaledToFit()
+          .foregroundStyle(.cyan)
+        Image(systemName: "wind")
+          .resizable()
+          .scaledToFit()
+          .foregroundStyle(.blue)
+        Image(systemName: "flame")
+          .resizable()
+          .scaledToFit()
+          .foregroundStyle(.red)
+      }
+      .padding()
     }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
